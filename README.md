@@ -1,4 +1,4 @@
-# Zewei-Wu.github.io
+# zewei-wu.github.io
 
 This is the repository for my personal website, including my research, art, and two blogs.
 Built with [Eleventy](https://www.11ty.dev/) and plain CSS.
