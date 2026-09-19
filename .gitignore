@@ -1,1 +1,7 @@
 src/research-blog/posts/writing-a-post.md
+node_modules/
+_site/
+.DS_Store
+*.log
+.cache/
+.eleventy-cache/
