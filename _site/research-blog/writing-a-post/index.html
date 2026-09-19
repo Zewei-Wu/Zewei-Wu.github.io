@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme-pref="system" data-assets="/assets/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How this blog works — Zewei &#39;Jason&#39; Wu</title>
+  <meta name="description" content="Personal website of Zewei &#39;Jason&#39; Wu Astrophysics research on galaxy and dark matter simulations A CV website, research blog, an art portfolio">
+  <meta name="author" content="Zewei &#39;Jason&#39; Wu">
+  <meta name="keywords" content="Zewei Wu, Jason Wu, astrophysics, cosmology, dark matter, simulations, UCSD">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f7fc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#070b16" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How this blog works — Zewei &#39;Jason&#39; Wu">
+  <meta property="og:description" content="Personal website of Zewei &#39;Jason&#39; Wu Astrophysics research on galaxy and dark matter simulations A CV website, research blog, an art portfolio">
+  <meta property="og:image" content="https://Zewei-Wu.github.io/images/front.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/images/icon.jpeg">
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/FiraGO-Regular.latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  
+  <link rel="stylesheet" href="/assets/vendor/katex/katex.min.css">
+  
+  
+
+  <script>
+    /* Set the theme before first paint so there is no flash. */
+    (function () {
+      var pref = "system";
+      try { pref = localStorage.getItem("theme") || "system"; } catch (e) {}
+      var dark = pref === "dark" ||
+        (pref === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var el = document.documentElement;
+      el.dataset.themePref = pref;
+      el.dataset.theme = dark ? "dark" : "light";
+    })();
+  </script>
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__stars"></div>
+  </div>
+
+  
+<div class="standalone" data-accent="blue">
+
+  <header class="topbar glass" id="topbar">
+    <a class="topbar__back" href="/research-blog/">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M15 5.5 8.5 12l6.5 6.5"/></svg>
+      <span class="topbar__back-label">All posts</span>
+    </a>
+
+    
+  
+  
+  <nav class="topbar__nav" aria-label="Post sections">
+    <a class="topbar__link" href="#front-matter" data-section-link="front-matter">Front matter</a>
+    <a class="topbar__link" href="#equations" data-section-link="equations">Equations</a>
+    <a class="topbar__link" href="#code" data-section-link="code">Code</a>
+    <a class="topbar__link" href="#figures" data-section-link="figures">Figures</a>
+    <a class="topbar__link" href="#interactive-plots" data-section-link="interactive-plots">Interactive plots</a>
+    <a class="topbar__link" href="#everything-else" data-section-link="everything-else">Everything else</a>
+  </nav>
+  
+
+
+    <div class="topbar__end">
+      
+      <button class="theme-toggle theme-toggle--compact" id="theme-toggle" type="button"
+              aria-label="Switch colour theme" title="Theme: system">
+        <span class="theme-toggle__icon theme-toggle__icon--sun"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.6v2.1M12 19.3v2.1M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/></svg></span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.2A8.4 8.4 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2"/></svg></span>
+        <span class="theme-toggle__text" id="theme-toggle-text">System</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="standalone__main" id="main" tabindex="-1">
+    
+<article class="post">
+  <header class="post__header">
+    <p class="post__meta">
+      <time datetime="2026-09-18">September 18, 2026</time><span class="tag">meta</span></p>
+    <h1 class="post__title">How this blog works</h1>
+    <p class="post__subtitle">Everything a post can contain — headings, equations, code, figures and interactive plots. Delete this file once you have your own posts.</p>
+  </header>
+
+  <div class="post__body prose">
+    <p>A post is one markdown file in <code>src/research-blog/posts/</code>. The front matter at
+the top sets the title, subtitle and date; everything below it is ordinary
+markdown. Drop the file in, save, and it appears on the index — no list to
+update, no HTML to write.</p>
+<h2 id="front-matter" tabindex="-1">Front matter <a class="heading-anchor" href="#front-matter" aria-hidden="true">#</a></h2>
+<p>Only <code>title</code> and <code>date</code> are required.</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Star formation in ultra<span class="token punctuation">-</span>faint dwarfs
+<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> One line that shows up under the title and on the index card.
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2026-09-18</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"simulations"</span><span class="token punctuation">,</span> <span class="token string">"enzo"</span><span class="token punctuation">]</span>
+<span class="token key atrule">image</span><span class="token punctuation">:</span> images/posts/sfrd<span class="token punctuation">-</span>hero.png   <span class="token comment"># optional; otherwise the first image is used</span>
+<span class="token key atrule">draft</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>                          <span class="token comment"># hidden from production builds</span>
+<span class="token punctuation">---</span></code></pre>
+<p>Setting <code>draft: true</code> keeps a post visible while you run <code>npm start</code> but leaves
+it out of the built site, so you can write in the open branch without
+publishing.</p>
+<h2 id="equations" tabindex="-1">Equations <a class="heading-anchor" href="#equations" aria-hidden="true">#</a></h2>
+<p>Inline math sits between single dollar signs — the escape fraction <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{\rm esc}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">esc</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
+is the usual suspect — and display math between double ones:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>ρ</mi><mo>˙</mo></mover><mo>⋆</mo></msub><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mtext>  </mtext><mo>=</mo><mtext>  </mtext><msubsup><mo>∫</mo><msub><mi>M</mi><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi></mrow></msub><mi mathvariant="normal">∞</mi></msubsup><mfrac><mrow><mi mathvariant="normal">d</mi><mi>n</mi></mrow><mrow><mi mathvariant="normal">d</mi><mi>M</mi></mrow></mfrac><mtext> </mtext><msub><mover accent="true"><mi>M</mi><mo>˙</mo></mover><mo>⋆</mo></msub><mo stretchy="false">(</mo><mi>M</mi><mo separator="true">,</mo><mi>z</mi><mo stretchy="false">)</mo><mtext> </mtext><mi mathvariant="normal">d</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">\dot{\rho}_\star(z) \;=\; \int_{M_{\rm min}}^{\infty}
+\frac{\mathrm{d}n}{\mathrm{d}M}\, \dot{M}_\star(M, z)\, \mathrm{d}M
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord katex-accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">ρ</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1757em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">⋆</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.044em;">z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.4263em;vertical-align:-1.012em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.4445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.109em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.334em;"><span style="top:-2.357em;margin-left:-0.109em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="katex-sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">min</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.012em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.109em;">M</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord katex-accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">M</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1757em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">⋆</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.109em;">M</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.044em;">z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.109em;">M</span></span></span></span></span></p>
+<p>These are rendered with KaTeX <strong>at build time</strong>, so the published page is plain
+HTML — nothing to download, and it still reads correctly if a visitor blocks
+scripts.</p>
+<h2 id="code" tabindex="-1">Code <a class="heading-anchor" href="#code" aria-hidden="true">#</a></h2>
+<p>Fenced blocks are highlighted during the build:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> yt
+
+ds <span class="token operator">=</span> yt<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">"DD0100/DD0100"</span><span class="token punctuation">)</span>
+ad <span class="token operator">=</span> ds<span class="token punctuation">.</span>all_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># star formation rate density in a 1 Mpc/h box</span>
+masses <span class="token operator">=</span> ad<span class="token punctuation">[</span><span class="token string">"all"</span><span class="token punctuation">,</span> <span class="token string">"particle_mass"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>in_units<span class="token punctuation">(</span><span class="token string">"Msun"</span><span class="token punctuation">)</span>
+ages <span class="token operator">=</span> ad<span class="token punctuation">[</span><span class="token string">"all"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>in_units<span class="token punctuation">(</span><span class="token string">"Myr"</span><span class="token punctuation">)</span>
+sfrd <span class="token operator">=</span> masses<span class="token punctuation">[</span>ages <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">10e6</span> <span class="token operator">*</span> ds<span class="token punctuation">.</span>domain_width<span class="token punctuation">.</span>in_units<span class="token punctuation">(</span><span class="token string">"Mpc"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">**</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"SFRD = </span><span class="token interpolation"><span class="token punctuation">{</span>sfrd<span class="token punctuation">:</span><span class="token format-spec">.3e</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span></code></pre>
+<p>Short spans of <code>inline code</code> work the usual way.</p>
+<h2 id="figures" tabindex="-1">Figures <a class="heading-anchor" href="#figures" aria-hidden="true">#</a></h2>
+<p>Use the <code>img</code> shortcode so images get a caption, lazy loading and a click-to-zoom
+viewer, and so a missing file falls back to a placeholder instead of breaking the
+build:</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">img</span> <span class="token string">"images/posts/halo-profile.png"</span><span class="token punctuation">,</span>
+       <span class="token string">"Density profile of a simulated halo"</span><span class="token punctuation">,</span>
+       <span class="token string">"NFW fit to a z = 6 halo, 1024³ run"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<figure class="figure " data-missing="true"><img src="/assets/img/placeholder.svg" alt="Example figure" loading="lazy" decoding="async"><figcaption>Captions sit under the image in small grey type.</figcaption></figure>
+<h2 id="interactive-plots" tabindex="-1">Interactive plots <a class="heading-anchor" href="#interactive-plots" aria-hidden="true">#</a></h2>
+<p>Export a Plotly figure from Python straight into the repo:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> plotly<span class="token punctuation">.</span>io <span class="token keyword">as</span> pio
+pio<span class="token punctuation">.</span>write_json<span class="token punctuation">(</span>fig<span class="token punctuation">,</span> <span class="token string">"src/files/plots/sfrd.json"</span><span class="token punctuation">)</span></code></pre>
+<p>then drop it into a post:</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">plotly</span> <span class="token string">"files/plots/sfrd.json"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<p><code>plotly.js</code> is only fetched on pages that actually contain a figure, and the
+plot restyles itself when the page switches between light and dark.</p>
+<h2 id="everything-else" tabindex="-1">Everything else <a class="heading-anchor" href="#everything-else" aria-hidden="true">#</a></h2>
+<p>Standard markdown all works: <strong>bold</strong>, <em>italic</em>, <a href="https://ui.adsabs.harvard.edu/">links</a>,
+blockquotes, tables and footnotes<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>Resolution</th>
+<th>Box size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>512³</td>
+<td>10 Mpc/h</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1024³</td>
+<td>10 Mpc/h</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Blockquotes are useful for pulling a result out of the surrounding text.</p>
+</blockquote>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Footnotes land at the bottom of the post with a link back up. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+  </div>
+
+  <nav class="post__nav" aria-label="More posts">
+    <a class="button" href="/research-blog/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M15 5.5 8.5 12l6.5 6.5"/></svg> All posts</a>
+  </nav>
+</article>
+
+  </main>
+
+  <footer class="standalone__foot">
+    <p>© Zewei &#39;Jason&#39; Wu · <a href="/">back to the main site</a></p>
+  </footer>
+</div>
+
+
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/glass.js" defer></script>
+  
+<script src="/assets/js/sectionbar.js" defer></script>
+<script src="/assets/js/lightbox.js" defer></script>
+
+<script src="/assets/js/plotly-embed.js" defer></script>
+
+
+</body>
+</html>

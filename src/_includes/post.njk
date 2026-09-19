@@ -1,0 +1,38 @@
+{% extends "standalone.njk" %}
+{% import "partials/icons.njk" as icons %}
+
+{% block topnav %}
+  {% set headings = content | sectionHeadings %}
+  {% if headings.length %}
+  <nav class="topbar__nav" aria-label="Post sections">
+    {%- for h in headings %}
+    <a class="topbar__link" href="#{{ h.id }}" data-section-link="{{ h.id }}">{{ h.text }}</a>
+    {%- endfor %}
+  </nav>
+  {% endif %}
+{% endblock %}
+
+{% block page %}
+<article class="post">
+  <header class="post__header">
+    <p class="post__meta">
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+      {%- if tags %}{% for t in tags %}{% if t != "post" %}<span class="tag">{{ t }}</span>{% endif %}{% endfor %}{% endif -%}
+    </p>
+    <h1 class="post__title">{{ title }}</h1>
+    {% if subtitle %}<p class="post__subtitle">{{ subtitle }}</p>{% endif %}
+  </header>
+
+  <div class="post__body prose">
+    {{ content | safe }}
+  </div>
+
+  <nav class="post__nav" aria-label="More posts">
+    <a class="button" href="{{ '/research-blog/' | url }}">{{ icons.icon("arrow-left") }} All posts</a>
+  </nav>
+</article>
+{% endblock %}
+
+{% block extraScripts %}
+<script src="{{ '/assets/js/plotly-embed.js' | url }}" defer></script>
+{% endblock %}

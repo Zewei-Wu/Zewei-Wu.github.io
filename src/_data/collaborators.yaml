@@ -1,0 +1,94 @@
+# ---------------------------------------------------------------------------
+# Pins for the interactive map at the bottom of the home panel.
+#
+# Add a pin:   copy a block, set name / lat / lon / note / kind.
+# kind:        home | institution | observatory   (controls the pin colour)
+#
+# Seeded from the institutions already named on your research pages —
+# edit freely, this is just data.
+# ---------------------------------------------------------------------------
+- name: UC San Diego
+  place: La Jolla, California, USA
+  lat: 32.8801
+  lon: -117.2340
+  kind: home
+  note: Department of Astronomy & Astrophysics, PhD research.
+
+- name: University of Chicago
+  place: Chicago, Illinois, USA
+  lat: 41.7886
+  lon: -87.5987
+  kind: institution
+  note: B.S. in Astrophysics; Undergrad thesis.
+
+- name: Fermi National Accelerator Laboratory
+  place: Batavia, Illinois, USA
+  lat: 41.8414
+  lon: -88.2556
+  kind: institution
+  note: LDMX particle-flow reconstruction; summer internship.
+
+- name: Flatiron Institute
+  place: New York City, New York, USA
+  lat: 40.740612
+  lon: -73.990799
+  kind: institution
+
+# - name: San Diego Supercomputer Center
+#   place: San Diego, California, USA
+#   lat: 32.8853
+#   lon: -117.2388
+#   kind: institution
+
+- name: Las Campanas Observatory
+  place: Atacama Region, Chile
+  lat: -29.0146
+  lon: -70.6926
+  kind: observatory
+  note: Magellan 6.5 m telescopes; observing runs for strongly-lensed targets.
+
+- name: Cerro Tololo Inter-American Observatory
+  place: Coquimbo Region, Chile
+  lat: -30.1690
+  lon: -70.8060
+  kind: observatory
+
+- name: Vera C. Rubin Observatory
+  place: Coquimbo Region, Chile
+  lat: -30.2446
+  lon: -70.7494
+  kind: observatory
+
+- name: Max Planck Institute for Astronomy (MPIA)
+  place: Garching bei München, Germany
+  lat: 49.398750
+  lon: 8.672434
+  kind: institution
+
+- name: Max Planck Institute for Astrophysics (MPA)
+  place: Garching bei München, Germany
+  lat: 48.2617
+  lon: 11.6713
+  kind: institution
+  note: Multiphase Gas Group; DAAD Research Internship.
+
+- name: Yale University
+  place: New Haven, Connecticut, USA
+  lat: 41.3163
+  lon: -72.9223
+  kind: institution
+  note: Leitner Observatory; photometry of supernova 2020pni.
+
+- name: Dartmouth College
+  place: Hanover, New Hampshire, USA
+  lat: 43.7044
+  lon: -72.2887
+  kind: institution
+  note: Department of Earth Sciences; superhydrophobicity project.
+
+- name: National Astronomical Observatories, CAS
+  place: Beijing, China
+  lat: 39.9878
+  lon: 116.3789
+  kind: institution
+  note: High Energy Astrophysics Group; iron line profiles in accretion disks.

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" data-theme-pref="system" data-assets="/assets/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Art Blog — Zewei &#39;Jason&#39; Wu</title>
+  <meta name="description" content="Photography, pixel art and vector art by Zewei (Jason) Wu; landscapes, architecture and astrophotography.">
+  <meta name="author" content="Zewei &#39;Jason&#39; Wu">
+  <meta name="keywords" content="Zewei Wu, Jason Wu, astrophysics, cosmology, dark matter, simulations, UCSD">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f7fc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#070b16" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Art Blog — Zewei &#39;Jason&#39; Wu">
+  <meta property="og:description" content="Photography, pixel art and vector art by Zewei (Jason) Wu; landscapes, architecture and astrophotography.">
+  <meta property="og:image" content="https://Zewei-Wu.github.io/images/front.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/images/icon.jpeg">
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/FiraGO-Regular.latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  
+  <link rel="stylesheet" href="/assets/vendor/katex/katex.min.css">
+  
+  
+
+  <script>
+    /* Set the theme before first paint so there is no flash. */
+    (function () {
+      var pref = "system";
+      try { pref = localStorage.getItem("theme") || "system"; } catch (e) {}
+      var dark = pref === "dark" ||
+        (pref === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var el = document.documentElement;
+      el.dataset.themePref = pref;
+      el.dataset.theme = dark ? "dark" : "light";
+    })();
+  </script>
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__stars"></div>
+  </div>
+
+  
+<div class="standalone" data-accent="art">
+
+  <header class="topbar glass" id="topbar">
+    <a class="topbar__back" href="/">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M15 5.5 8.5 12l6.5 6.5"/></svg>
+      <span class="topbar__back-label">Back to main site</span>
+    </a>
+
+    
+<nav class="topbar__nav" aria-label="Art sections">
+  <a class="topbar__link" href="#welcome" data-section-link="welcome">Welcome</a>
+  <a class="topbar__link" href="#photography" data-section-link="photography">Photography</a>
+  <a class="topbar__link" href="#digital-art" data-section-link="digital-art">Digital Art</a>
+</nav>
+
+
+    <div class="topbar__end">
+      
+<ul class="topbar__socials">
+  <li><a href="https://www.instagram.com/jwu_arts/" target="_blank" rel="noopener" title="Instagram — art"><svg class="icon" viewBox="0 0 24 24" aria-hidden="false" role="img" focusable="false"><title>Instagram (art)</title><path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 3.2a8.8 8.8 0 0 0 0 17.6c1.3 0 1.9-.8 1.9-1.7 0-.9-.6-1.5-.6-2.3 0-.9.7-1.6 1.7-1.6h1.6a4.2 4.2 0 0 0 4.2-4.2c0-4.3-4-7.8-8.8-7.8"/>
+  <circle cx="8" cy="10" r="1.2" fill="currentColor"/><circle cx="12" cy="7.6" r="1.2" fill="currentColor"/><circle cx="16" cy="10" r="1.2" fill="currentColor"/></svg></a></li>
+  <li><a href="https://www.instagram.com/jasonwu_21/" target="_blank" rel="noopener" title="Instagram — photography"><svg class="icon" viewBox="0 0 24 24" aria-hidden="false" role="img" focusable="false"><title>Instagram (photography)</title><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M3.2 8.6A1.6 1.6 0 0 1 4.8 7h2.6l1.3-2h6.6l1.3 2h2.6a1.6 1.6 0 0 1 1.6 1.6v9.2a1.6 1.6 0 0 1-1.6 1.6H4.8a1.6 1.6 0 0 1-1.6-1.6z"/>
+  <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a></li>
+</ul>
+
+      <button class="theme-toggle theme-toggle--compact" id="theme-toggle" type="button"
+              aria-label="Switch colour theme" title="Theme: system">
+        <span class="theme-toggle__icon theme-toggle__icon--sun"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.6v2.1M12 19.3v2.1M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/></svg></span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.2A8.4 8.4 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2"/></svg></span>
+        <span class="theme-toggle__text" id="theme-toggle-text">System</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="standalone__main" id="main" tabindex="-1">
+    
+<div class="prose">
+
+  <header class="page-head" id="welcome">
+    <h1 class="page-head__title">Art</h1>
+    <p class="page-head__intro">
+      I am an enthusiast photographer who mostly enjoys landscape and travel photography.
+      You can see different categories of my works listed here in reverse chronological order,
+      including both photography and digital art pieces. Additionally, I post some of the pieces
+      on my instagram (<a href="https://www.instagram.com/jwu_arts/" target="_blank" rel="noopener">@jwu_arts</a>)
+      account, so feel free to give it a follow if you are interested in seeing more or
+      full-resolution versions of my works.
+    </p>
+  </header>
+  <section class="art-section">
+    <h2 id="photography">Photography</h2>
+    <p>Landscapes and architecture photography let me explore how human history and nature intersect, framing stories through the textures of old cities and sweeping views of timeless scenes.</p>
+    <p>I started out with a Nikon D750 DSLR camera, paired with a 50-year-old 50mm manual-focus lens gifted by a friend – a setup that lasted me for years. Throughout my photographic journey, I've also used other digital cameras from Canon, Sony, Fujifilm, and others – but Nikon's pairing remained my favorite for its versatility, vintage-feel, anc accurate color representation.</p>
+    <p>Lately I've picked up film photography again after missing the dark room for ten years. Analog is such a physical medium that instantly allows me to recall the moment unlike anything in digital. Stay tuned for more experiments with film!</p>
+    <h3 class="year-rule" id="photography-2025">2025</h3>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2025_7_Bailihualang Large.jpeg" alt="Bend of 百里画廊 (Hundred-Mile Gallery)" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f5.6, 1/500, ISO200</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Bend of 百里画廊 (Hundred-Mile Gallery)</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>A river carves its way through rolling meadows and pine forests, framed by the distant peaks of the Tianshan.</li>
+<li>The gentle curve of the water captures the balance of stillness and motion that defines this storied valley.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2025_7_Guozigou Large.jpeg" alt="果子沟大桥 (Guozigou Bridge)" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f5.6, 1/1600, ISO200</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">果子沟大桥 (Guozigou Bridge)</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>Against a backdrop of rugged green mountains and snow-capped peaks, cables rise like a modern monument in an ancient landscape.</li>
+<li>The Guozigou Bridge is a marvel of engineering on the Lianhuo Expressway, which runs across the entirety of China. Countless shipping trucks soar through this bridge every day carrying goods from Kazakhstan to the Pacific.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2025_7_Xinjiang Large.jpeg" alt="Haystack with mountains of Xinjiang" loading="lazy" decoding="async">
+  <figcaption>Canon EOS R7, AP | 76mm, f7.1, 1/320, ISO300</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Haystack with mountains of Xinjiang</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>A lone haystack stands in the foreground, while waves of hills, grassland, and jagged ridges recede into the misty distance.</li>
+<li>I adore Xinjiang’s geographic richness, reflected in this layered composition — each horizon holds a new story in texture and light.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2025_3_petrified_forest Large.jpeg" alt="Elm Trees, Petrified Forest National Park" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/800, ISO200</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Elm Trees, Petrified Forest National Park</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>Ancient wood turned to stone lies scattered across painted earth, while new life emerges from the buried.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2025_3_horseshoe_canyon Large.jpeg" alt="Horseshoe Canyon" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/400, ISO100</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Horseshoe Canyon</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>A river bends in a perfect curve through sheer red cliffs, carving a sculpture out of desert stone.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2025_3_vegas Large.jpeg" alt="Las Vegas Palms" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f5.6, 1/640, ISO200</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Las Vegas Palms</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>Palm silhouettes rise against the desert sky, a reminder of resilience and contrast in a city of neon and mirage.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2025_3_grand_canyon Large.jpeg" alt="Snow-Capped Grand Canyon" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f5.6, 1/800, ISO100</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Snow-Capped Grand Canyon</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>The canyon’s vast cliffs wear a crown of snow, where silence and grandeur meet in winter’s embrace.</li>
+</ul>
+
+      </div>
+    </article>
+    <h3 class="year-rule" id="photography-2024">2024</h3>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_10_uchicago Large.jpeg" alt="UChicago Campus" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f5.6, 1/1000, ISO200</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">UChicago Campus</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>The Ida Noyes Hall of the University of Chicago, with its classic architecture, red-and-white bricks, and duo-colored ivies.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_8_neuschwanstein Large.jpeg" alt="Fog at Neuschwanstein Castle" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/250, ISO400</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Fog at Neuschwanstein Castle</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>We visited the Neuschwanstein castles in a misty day – conditions quite typical for a central European summer. At one point the fog obscured our view completely. Just as we were heading down the mountains, the cloud cleared up, revealing the original inspiration behind Walt Disney’s castle.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_8_jungfrau Large.jpeg" alt="Jungfrau, top of Europe" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f5.0, 1/250, ISO320</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Jungfrau, top of Europe</h3><p class="entry__meta">Landscapes &amp; Nature</p>
+        <ul>
+<li>This photo was taken atop Jungfrau of the Swiss alps. The two houses in the foreground contrast with the expansive, rolling landscape of the back. It makes me imagine the details of its residents’ daily lives.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_8_venice Large.jpeg" alt="Venice Waterway" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/400, ISO100</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Venice Waterway</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>The venetian city layout opens its way to many stunning, picturesque compositions. I especially appreciate the interminglement of water and traditional architectures.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_7_heidelberg Large.jpeg" alt="Schloss Heidelberg" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/500, ISO500</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Schloss Heidelberg</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>This is the quintessential German experience – the misty clouds, green hills, dense trees, pointy castles, red roofs, white walls, and a winding road leading up to the Schloss Heidelberg.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_6_romesunset Large.jpeg" alt="Rome at Sunset" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/500, ISO100</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Rome at Sunset</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>Timeless elegance carved in the stones and shadows of Rome.</li>
+<li>Photo shows the Ponte Sisto, arching gracefully across the Tiber. One of the most famous renaissance bridges, its worn stones carries centuries of footsteps, whispers, and sunsets over the Eternal City.</li>
+<li>Landscapes and architecture photography let me explore how human history and nature intersect, framing stories through the textures of old cities and sweeping views of timeless scenes.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_6_amsterdam Large.jpeg" alt="Sunset in Amsterdam" loading="lazy" decoding="async">
+  <figcaption>FIJIFILM XC35mmF2, AP | f8.0, 1/250, ISO160</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Sunset in Amsterdam</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>Perhaps inspired by viewing “The Night Watch” at the National Museum of Netherland, I composed this photo with a similar motif of showing people of different walks of life gathered at the dusk of the city, gilded by the wanning light.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_6_munich Large.jpeg" alt="The Ismaning Town Hall" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/4000, ISO320</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">The Ismaning Town Hall</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>I briefly stayed at the town of Ismaning, south of Garching bei München where I interned at the Max Planck Institute for summer of 2024. The town’s relaxed atmosphere made it perfect for me to wind down after an intense academic year.</li>
+<li>This photo reflects this moment of tranquility: I had just arrived at a foreign country and taken the train to an unfamiliar town. The solemn ringings of the bell tower halted me on my journey to the hotel. Here, I reclaimed a slowness to life which I’ve lost for a long time.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_5_cherry Large.jpeg" alt="Lamp Post and Blossoms" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/1250, ISO79</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Lamp Post and Blossoms</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>A lamp post by the UChicago book store juxtaposes with the vibrant cherry blossoms in the background.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_5_salzburg Large.jpeg" alt="Salzburg" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/6000, ISO320</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Salzburg</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>With my friend visiting me in Munich, we took a trip to Salzburg, Austria. The city can be descrabed by a brush of green and blue, decorated with the traditional architectures of churches and castles.</li>
+<li>Ascending to the top of the mountains, we are able to see down onto the vast flatlands, rolling into the Austrian alps down South. It was a view I won’t ever forget.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_3_penguin Large.jpeg" alt="Isla Gaviota de Chile" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/3200, ISO250</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Isla Gaviota de Chile</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>Red, yellow, and blue – the tricolors of Chile mixes with the light and shadows of the south Pacific coast.</li>
+<li>We took a glimpse of this small island on our visit to the Reserva Nacional Pinguino de Humboldt.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_3_magellantelescopes Large.jpeg" alt="Observatorio Interamericano del Cerro Tololo" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/640, ISO125</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Observatorio Interamericano del Cerro Tololo</h3><p class="entry__meta">Landscapes</p>
+        <ul>
+<li>These collection of observatories atop Cerro Tololo stand out from the stretching deserts behind. The composition is so simple yet so effective – it shows a sense of expanding scale from the multiple layers in the image.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2024_3_magellanlongexp Large.jpeg" alt="The Milky Way atop Chile" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 20.0, ISO100</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">The Milky Way atop Chile</h3><p class="entry__meta">Astrophotography</p>
+        <ul>
+<li>A long exposure under the pristine skies of Atacama Desert, where the Milky Way unveils its brilliant tapestry of light and time.</li>
+<li>I am naturally drawn to Astrophotography as it reveals the hidden splendor of the night sky otherwise invisible to the naked eye.</li>
+</ul>
+
+      </div>
+    </article>
+    <h3 class="year-rule" id="photography-2023">2023</h3>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_12_disney Large.jpeg" alt="Fireworks at Disney" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/100, ISO4000</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Fireworks at Disney</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>Taken at the Orlando Disney World, this was a splendid fireworks display, lighting up the entire sky and forming nebulae-like structures with the pastel red and green colors.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_12_northwestern Large.jpeg" alt="The Blazing Maple Leaf v.3" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f2.8, 1/400, ISO200</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">The Blazing Maple Leaf v.3</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>A sheet of maple leaf on the Northwestern Evanston campus.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_12_SF Large.jpeg" alt="The Golden Gate Bridge" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/200, ISO100</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">The Golden Gate Bridge</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>The classic composition with the Golden Gate, taken on the south side of the San Francisco Bay on my visit to friends in California.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_11_campus Large.jpeg" alt="Cobb Gate, University of Chicago" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/1250, ISO800</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Cobb Gate, University of Chicago</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>The Cobb gate of the University of Chicago campus.</li>
+<li>Some say you should not cross the gate before commencement of your first year, lest you would not graduate.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_11_northwestern1 Large.jpeg" alt="The Blazing Maple Leaf v.1" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/1000, ISO500</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">The Blazing Maple Leaf v.1</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>Maple leafs on the Northwestern Evanston campus.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_11_northwestern2 Large.jpeg" alt="The Blazing Maple Leaf v.2" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/2000, ISO160</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">The Blazing Maple Leaf v.2</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>A sheet of maple leaf on the Northwestern Evanston campus.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_8_bunny Large.jpeg" alt="Bunny and Leaf" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/800, IS1600</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Bunny and Leaf</h3><p class="entry__meta">Portrait</p>
+        <ul>
+<li>This photo was taken at a cat café in the Nanluogu Valley of Beijing. It was difficult to capture this moment with this active little creature. Yet here it is eyeing a piece of leaf for lunch, with its fur gently careessed by the sunlight.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_8_field Large.jpeg" alt="Sempre caro mi fu quest&#39;ermo colle" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/1250, ISO79</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Sempre caro mi fu quest&#39;ermo colle</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>A small house in the middle of a field, in the Fermilab Batavia campus.</li>
+<li>I had a lot of Italian influences from my time at Fermilab in the summer of 2023. This poem “L’infinito” came to mind when taking this photo.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_7_fermibike Large.jpeg" alt="Biking After Rain" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f2.8, 1/320, ISO320</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Biking After Rain</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>Biking around the ring was one of my most fond memories at Fermilab. That day was going to be no different, but my passions were curbed by a sudden thunderstorm, which forced me into hiding.</li>
+<li>I had just came out from a window sill, where I took shelter through the thunderstorm – the sun had done the same, it seemed, generously casting its rays onto the bike and the grass nearby.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_7_fermiwilson Large.jpeg" alt="Wilson Hall, Fermilab" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f16.0, 3.0, ISO50</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Wilson Hall, Fermilab</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>The Wilson Hall where I went to work everyday at Fermilab. It was such a towering figure in the middle of an essentially empty flatland, and thus it stands out especially among the architectures I’ve done science in.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_6_fireflies Large.jpeg" alt="Fireflies" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 10.0, ISO1600</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Fireflies</h3><p class="entry__meta">Landscape</p>
+        <ul>
+<li>I saw fireflies for the first time at Fermilab, where it was dark and unpolluted enough for them to exist naturally. Those fleeting green dots captured my interests for quite a few days.</li>
+<li>This photo was ontained from stacking together multiple 10.0s exposure shots. This was done to show the fireflies more clearly while not overblowing the background with a single exposure.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_6_Pitt Large.jpeg" alt="University of Pittsburgh" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f8.0, 1/1250, ISO200</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">University of Pittsburgh</h3><p class="entry__meta">Landscapes &amp; Architecture</p>
+        <ul>
+<li>This photo was accidentally obtained when adjusting the lighting on a not-so-ideal exposure. It captures the brooding prescence of the clouds. The architecture below is ignited by the rays that managed to escape the heavens.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_5_cherry Large.jpeg" alt="Cherry Blossoms" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f2.4, 1/3200, ISO160</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Cherry Blossoms</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>The cherry blossoms bloom in spring, capturing fleeting moments of beauty at the University of Chicago campus.</li>
+<li>I love stills with narrow field-of-view compositions, because they capture the quiet elegance of a single moment, preserving the beauty and fragility of life in perfect detail.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_5_flowers Large.jpeg" alt="Flowers by the Regenstein Library" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f2.4, 1/3200, ISO160</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Flowers by the Regenstein Library</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>The white blossoms grow from bottom right to top left, rising against the beams of sunlight, which illuminates the edges of its young leaves. I believe this sufficiently showcases the beauty of nature and still lifes.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_5_hbd Large.jpeg" alt="Happy Birthday!" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f5.6, 10.0, ISO100</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Happy Birthday!</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>A happy birthday message, taken of me drawing a light painting with my moon globe, and sent to someone special :).</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_5_CMU Large.jpeg" alt="Locks on Schenley Bridge" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/1000, ISO150</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Locks on Schenley Bridge</h3><p class="entry__meta">Stills</p>
+        <ul>
+<li>The Schenley Park, being one of my favorite localities in Pittsburgh, also hosts a bridge with locks on top. Many people come here to wish for a successful relationship, while I simply appreciated the intricate lock designs when I visited.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/photography/2023_4_moon Large.jpeg" alt="The Moon" loading="lazy" decoding="async">
+  <figcaption>Nikon D750, M | f4.0, 1/200, ISO2000</figcaption>
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">The Moon</h3><p class="entry__meta">Astrophotography</p>
+        <ul>
+<li>The moon, taken from my camera looking through the telescope atop the Ryerson Observatory at UChicago. The phase is wanning, and the photo shows in detail the transition between light and shadow on our planet’s only satellite.</li>
+</ul>
+
+      </div>
+    </article>
+  </section>
+  <section class="art-section">
+    <h2 id="digital-art">Digital Art</h2>
+    <p>Pixel art is easily my favorite style. I believe its minimalism is key for inspiring creativity and universality in the digital age. Similarly, vector art allows me to fuse my appreciation for technology into artistic expressions.</p>
+    <h3 class="year-rule" id="digital-art-2023">2023</h3>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2023_1_tuoba.png" alt="Tuoba the Cat" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Tuoba the Cat</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>This piece is my attempt at drawing Tuoba the cat, who has endlessly pestered me during my stay at my friend’s place.</li>
+</ul>
+
+      </div>
+    </article>
+    <h3 class="year-rule" id="digital-art-2022">2022</h3>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2022_10_rplace.png" alt="r/place" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">r/place</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>This is a section of Reddit’s r/place 2023 – except I tried recreating some of my iconic pieces with the limited palette available to the project.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2022_9_fw_characters.png" alt="Fairwick Side Characters" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Fairwick Side Characters</h3><p class="entry__meta">Pixel, Game Design</p>
+        <ul>
+<li>A selection from the cast of side characters from Fairwick School of Wichery, the game I was helping develop.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2022_6_clouds.png" alt="Clouds" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Clouds</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>A puff of nebulous cloud. It is my experiment on making more complicated landscape pieces.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2022_3_fw_hallway.png" alt="Clouds" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Clouds</h3><p class="entry__meta">Pixel, Game Design</p>
+        <ul>
+<li>A demo of the hallway of the Fairwick School of Witchery, including some characters and furnitures.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2022_3_fw_forest.png" alt="Magical Forest" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Magical Forest</h3><p class="entry__meta">Pixel, Game Design</p>
+        <ul>
+<li>A demo of the forest outside the Fairwick School of Witchery, including the main character and some decorations.</li>
+<li>The forest would be the first level of the game, where you gather potion ingredients from defeating monsters and collecting loot.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2022_3_minecraft.png" alt="Minecraft" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Minecraft</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>My imitation of one of Minecraft’s anniversary celebration books, available only in paperback form.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2022_2_cameras.png" alt="Vintage Cameras" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Vintage Cameras</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>Two vintage Leica cameras in pixel art style. I am a big fan of its simplicity.</li>
+</ul>
+
+      </div>
+    </article>
+    <h3 class="year-rule" id="digital-art-2021">2021</h3>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2021_12_portrait.png" alt="Portraiture" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Portraiture</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>Portrait of a friend of mine I drew, based on a pixelated projection at Boston’s Quincy Market.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/digital/2021_12_solar_wallpaper.png" alt="Solar system" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Solar system</h3><p class="entry__meta">Vector</p>
+        <ul>
+<li>The vastness of the solar system is represented through clean, scalable lines. I strive to bring science and art together in a modern, striking way.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2021_11_halloween.png" alt="Halloween Imagery" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Halloween Imagery</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>Some Halloween-themed imageries.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2021_10_apple.png" alt="Apple" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Apple</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>This piece, a hand-drawn apple, represents how small details in lighting can create recognizable imagery.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2021_9_rocks.png" alt="Rocks" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Rocks</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>Some rocks, as a practice of lighting and shading on different surfaces, as well as shapes and outlines.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2021_3_cherry.png" alt="Cherry Blossom" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Cherry Blossom</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>A cherry blossom twisting and turning as it extends upward.</li>
+</ul>
+
+      </div>
+    </article>
+    <h3 class="year-rule" id="digital-art-2020">2020</h3>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2020_12_truss.png" alt="Truss Icon" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Truss Icon</h3><p class="entry__meta">Pixel, Game Design</p>
+        <ul>
+<li>Some wooden truss, as an icon for my physics game “Truss Issues”. This was the first game project I’ve worked on.</li>
+</ul>
+
+      </div>
+    </article>
+    <article class="entry">
+      <figure class="figure ">
+  <img src="/arts/pixel/2020_9_turkey.png" alt="Turkey" loading="lazy" decoding="async">
+</figure>
+      <div class="entry__body">
+        <h3 class="entry__title">Turkey</h3><p class="entry__meta">Pixel</p>
+        <ul>
+<li>My first ever pixel art of a turkey, as I was fascinated with them around that time. This was also my first dive into making art.</li>
+</ul>
+
+      </div>
+    </article>
+  </section>
+
+</div>
+
+  </main>
+
+  <footer class="standalone__foot">
+    <p>© Zewei &#39;Jason&#39; Wu · <a href="/">back to the main site</a></p>
+  </footer>
+</div>
+
+
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/glass.js" defer></script>
+  
+<script src="/assets/js/sectionbar.js" defer></script>
+<script src="/assets/js/lightbox.js" defer></script>
+
+
+</body>
+</html>

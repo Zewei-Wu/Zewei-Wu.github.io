@@ -1,0 +1,27 @@
+{# ------------------------------------------------------------------ #}
+{# Interactive map block for the bottom of the home panel.             #}
+{# Pin data: src/_data/collaborators.yaml                              #}
+{# ------------------------------------------------------------------ #}
+<div class="mapblock">
+  <div class="mapblock__frame" data-map data-basemap="{{ site.map.basemap | default('vector') }}" data-pins='{{ collaborators | dump }}'
+       role="region" aria-label="Map of institutions and observatories"></div>
+
+  <div class="mapblock__legend">
+    <span><i class="mapblock__swatch pin-home"></i> Home institution</span>
+    <span><i class="mapblock__swatch pin-institution"></i> Collaborating institution</span>
+    <span><i class="mapblock__swatch pin-observatory"></i> Observatory</span>
+    <span style="margin-inline-start:auto">Click a pin for details · click the map to enable zoom</span>
+    <span style="flex-basis:100%;opacity:.75">Country outlines: Natural Earth (public domain)</span>
+  </div>
+
+  {%- if site.map.visitorId %}
+  <div class="visitormap">
+    <p class="visitormap__head">Recent visitors</p>
+    {%- if site.map.visitorProvider == "clustrmaps" %}
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d={{ site.map.visitorId }}"></script>
+    {%- else %}
+    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i={{ site.map.visitorId }}&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;br=1" async="async"></script>
+    {%- endif %}
+  </div>
+  {%- endif %}
+</div>

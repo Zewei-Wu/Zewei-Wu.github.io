@@ -1,0 +1,46 @@
+{% extends "base.njk" %}
+{% import "partials/icons.njk" as icons %}
+
+{# ------------------------------------------------------------------ #}
+{# Layout for whole separate pages (art blog, research blog, posts).   #}
+{# No global sidebar — just a frosted back-link bar along the top.     #}
+{# Children may override the `topnav`, `topend` and `page` blocks.     #}
+{# ------------------------------------------------------------------ #}
+
+{% block body %}
+<div class="standalone" data-accent="{{ accent | default('blue') }}">
+
+  <header class="topbar glass" id="topbar">
+    <a class="topbar__back" href="{{ (backHref | default('/')) | url }}">
+      {{ icons.icon("arrow-left") }}
+      <span class="topbar__back-label">{{ backLabel | default("Back to main site") }}</span>
+    </a>
+
+    {% block topnav %}{% endblock %}
+
+    <div class="topbar__end">
+      {% block topend %}{% endblock %}
+      <button class="theme-toggle theme-toggle--compact" id="theme-toggle" type="button"
+              aria-label="Switch colour theme" title="Theme: system">
+        <span class="theme-toggle__icon theme-toggle__icon--sun">{{ icons.icon("sun") }}</span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon">{{ icons.icon("moon") }}</span>
+        <span class="theme-toggle__text" id="theme-toggle-text">System</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="standalone__main" id="main" tabindex="-1">
+    {% block page %}{{ content | safe }}{% endblock %}
+  </main>
+
+  <footer class="standalone__foot">
+    <p>© {{ site.name }} · <a href="{{ '/' | url }}">back to the main site</a></p>
+  </footer>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ '/assets/js/sectionbar.js' | url }}" defer></script>
+<script src="{{ '/assets/js/lightbox.js' | url }}" defer></script>
+{% block extraScripts %}{% endblock %}
+{% endblock %}

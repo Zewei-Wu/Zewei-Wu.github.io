@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme-pref="system" data-assets="{{ '/assets/' | url }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{% if title %}{{ title }} — {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="author" content="{{ site.name }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f7fc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#070b16" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if title %}{{ title }} — {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  {% if site.portrait | assetExists %}<meta property="og:image" content="{{ site.url }}{{ site.portrait | url }}">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+
+  {% if site.favicon | assetExists %}<link rel="icon" href="{{ site.favicon | url }}">{% endif %}
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/fonts/FiraGO-Regular.latin.woff2' | url }}" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+  {# KaTeX is always linked so equations render on any panel swapped in by
+     the router. Its font files are only fetched when math is present. #}
+  <link rel="stylesheet" href="{{ '/assets/vendor/katex/katex.min.css' | url }}">
+  {# Leaflet's CSS + JS are loaded on demand by assets/js/map.js. #}
+  {% block head %}{% endblock %}
+
+  <script>
+    /* Set the theme before first paint so there is no flash. */
+    (function () {
+      var pref = "system";
+      try { pref = localStorage.getItem("theme") || "system"; } catch (e) {}
+      var dark = pref === "dark" ||
+        (pref === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var el = document.documentElement;
+      el.dataset.themePref = pref;
+      el.dataset.theme = dark ? "dark" : "light";
+    })();
+  </script>
+</head>
+<body class="{{ bodyClass }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {# Decorative background that the frosted surfaces blur. #}
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__stars"></div>
+  </div>
+
+  {% block body %}{% endblock %}
+
+  <script src="{{ '/assets/js/theme.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/glass.js' | url }}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

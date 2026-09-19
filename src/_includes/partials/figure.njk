@@ -1,0 +1,40 @@
+{# ------------------------------------------------------------------ #}
+{# Shared <figure>. Falls back to a placeholder when the image file is #}
+{# not in the repo yet, so the site always builds.                     #}
+{# ------------------------------------------------------------------ #}
+{% macro figure(src, alt="", caption="", creditName="", creditHref="", cls="") -%}
+<figure class="figure {{ cls }}"{% if not (src | assetExists) %} data-missing="true"{% endif %}>
+  <img src="{{ src | orPlaceholder }}" alt="{{ alt }}" loading="lazy" decoding="async">
+  {%- if caption or creditName %}
+  <figcaption>
+    {{- caption }}
+    {%- if creditName %} {% if caption %}({% endif %}{% if creditHref %}<a href="{{ creditHref }}" target="_blank" rel="noopener">{{ creditName }}</a>{% else %}{{ creditName }}{% endif %}{% if caption %}){% endif %}{% endif -%}
+  </figcaption>
+  {%- endif %}
+</figure>
+{%- endmacro %}
+
+{# A research / art record: image on the left, text on the right. #}
+{% macro entry(item) -%}
+<div class="entry">
+  {{ figure(item.image, item.alt or item.title, item.caption, item.creditName, item.creditHref) }}
+  <div class="entry__body">
+    <h3 class="entry__title">{{ item.title }}</h3>
+    {%- if item.mentor %}<p class="entry__meta">{{ item.mentor }}</p>{% endif %}
+    {%- if item.bullets %}
+    <ul>
+      {%- for b in item.bullets %}
+      <li>{{ b | mdi | safe }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- if item.links %}
+    <ul class="chips">
+      {%- for l in item.links %}
+      <li>{% if l.href %}<a href="{{ l.href | url }}"{% if '://' in l.href %} target="_blank" rel="noopener"{% endif %}>{{ l.label }} <span class="ext" aria-hidden="true">↗</span></a>{% else %}<span>{{ l.label }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</div>
+{%- endmacro %}

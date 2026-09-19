@@ -1,0 +1,44 @@
+---
+title: Research
+order: 2
+permalink: /research/
+description: Research projects in computational astrophysics, cosmology, dark matter and particle physics.
+---
+{% import "partials/figure.njk" as f %}
+
+{% if research.note %}
+<p class="lead"><em>{{ research.note }}</em> — see the <a href="{{ '/research-blog/' | url }}">research blog</a> for write-ups and notes as they happen.</p>
+{% endif %}
+
+<h2 id="focus">Research Focus</h2>
+
+<h3>Summary</h3>
+
+{% for para in research.summary %}
+<p>{{ para | mdi | safe }}</p>
+{% endfor %}
+
+<h3>Areas of Interest</h3>
+
+{% for area in research.areas %}
+<p>{{ area.label }}</p>
+<ul class="chips">
+  {%- for item in area.items %}
+  <li><span>{{ item }}</span></li>
+  {%- endfor %}
+</ul>
+{% endfor %}
+
+<h2 id="current">Current Research</h2>
+
+{% for item in research.current %}{{ f.entry(item) }}{% endfor %}
+
+<h2 id="previous">Previous Research</h2>
+
+{% for item in research.previous %}{{ f.entry(item) }}{% endfor %}
+
+<h2 id="writing">Writing</h2>
+
+<p>Longer-form notes, code snippets and thoughts on astronomy live in the research blog.</p>
+
+<p><a class="button" href="{{ '/research-blog/' | url }}">Open the research blog <span class="ext" aria-hidden="true">↗</span></a></p>

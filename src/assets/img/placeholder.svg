@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" role="img" aria-label="Image placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5d7fb5" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#3a4d75" stop-opacity=".34"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#g)"/>
+  <g fill="none" stroke="#7b93bd" stroke-opacity=".55" stroke-width="2.5">
+    <circle cx="400" cy="250" r="72"/>
+    <path d="M292 372 361 300l52 50 45-38 62 60"/>
+  </g>
+  <circle cx="356" cy="214" r="15" fill="#7b93bd" fill-opacity=".6"/>
+  <text x="400" y="455" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="25" fill="#7b93bd" fill-opacity=".9">image not in repo yet</text>
+  <text x="400" y="489" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="17" fill="#7b93bd" fill-opacity=".65">copy your media folders into src/</text>
+</svg>

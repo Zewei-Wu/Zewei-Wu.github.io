@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" data-theme-pref="system" data-assets="/assets/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Research — Zewei &#39;Jason&#39; Wu</title>
+  <meta name="description" content="Research projects in computational astrophysics, cosmology, dark matter and particle physics.">
+  <meta name="author" content="Zewei &#39;Jason&#39; Wu">
+  <meta name="keywords" content="Zewei Wu, Jason Wu, astrophysics, cosmology, dark matter, simulations, UCSD">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f7fc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#070b16" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research — Zewei &#39;Jason&#39; Wu">
+  <meta property="og:description" content="Research projects in computational astrophysics, cosmology, dark matter and particle physics.">
+  <meta property="og:image" content="https://Zewei-Wu.github.io/images/front.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/images/icon.jpeg">
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/FiraGO-Regular.latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  
+  <link rel="stylesheet" href="/assets/vendor/katex/katex.min.css">
+  
+  
+
+  <script>
+    /* Set the theme before first paint so there is no flash. */
+    (function () {
+      var pref = "system";
+      try { pref = localStorage.getItem("theme") || "system"; } catch (e) {}
+      var dark = pref === "dark" ||
+        (pref === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var el = document.documentElement;
+      el.dataset.themePref = pref;
+      el.dataset.theme = dark ? "dark" : "light";
+    })();
+  </script>
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__stars"></div>
+  </div>
+
+  
+<div class="shell">
+  
+
+
+
+
+
+<aside class="sidebar glass" id="sidebar" aria-label="Site navigation">
+  <div class="sidebar__inner">
+
+    <header class="identity">
+      <a class="identity__link" href="/" data-panel-link>
+        
+        <img class="identity__portrait" src="/images/front.jpg" alt="" width="128" height="128" loading="eager">
+        
+        <span class="identity__mark" aria-hidden="true">ZW</span>
+      </a>
+      <h1 class="identity__name">
+        <a href="/" data-panel-link>Zewei &#39;Jason&#39; Wu</a>
+      </h1>
+      <p class="identity__tagline">Astrophysics PhD student; Galaxy formation simulations</p>
+    </header>
+
+    <nav class="nav" aria-label="Sections">
+      <ul class="nav__list">
+        <li>
+          <a class="nav__link"
+             href="/"
+             data-panel-link
+             >
+            <span class="nav__dot" aria-hidden="true"></span>
+            <span class="nav__label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav__link is-active"
+             href="/research/"
+             data-panel-link
+             aria-current="page">
+            <span class="nav__dot" aria-hidden="true"></span>
+            <span class="nav__label">Research</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav__link"
+             href="/cv/"
+             data-panel-link
+             >
+            <span class="nav__dot" aria-hidden="true"></span>
+            <span class="nav__label">Contacts &amp; CV</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav__link"
+             href="/art/"
+             data-panel-link
+             >
+            <span class="nav__dot" aria-hidden="true"></span>
+            <span class="nav__label">Art</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="nav__divider" aria-hidden="true"></p>
+
+      <ul class="nav__list nav__list--pages">
+        <li>
+          <a class="nav__link nav__link--page" href="/research-blog/">
+            <span class="nav__label">Research Blog</span>
+            <span class="ext" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav__link nav__link--page" href="/art-blog/">
+            <span class="nav__label">Art Blog</span>
+            <span class="ext" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav__link nav__link--page" href="/files/ZeweiWuCV.pdf" target="_blank" rel="noopener">
+            <span class="nav__label">Curriculum Vitae (PDF)</span>
+            <span class="ext" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar__foot">
+      <ul class="contacts" aria-label="Contact and profiles">
+        <li>
+          <a class="contacts__link" href="mailto:jaw064@ucsd.edu"
+             
+             title="Email: jaw064@ucsd.edu">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="false" role="img" focusable="false"><title>Email</title><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 7.5A2.5 2.5 0 0 1 5.5 5h13A2.5 2.5 0 0 1 21 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 16.5z"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m3.6 7 7.3 5.3a2 2 0 0 0 2.2 0L20.4 7"/></svg>
+          </a>
+        </li>
+        
+        <li>
+          <a class="contacts__link" href="https://github.com/Zewei-Wu"
+             target="_blank" rel="noopener me"
+             title="GitHub: Zewei-Wu">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="false" role="img" focusable="false"><title>GitHub</title><path fill="currentColor" d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49l-.01-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.18-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.98.85.09-.66.36-1.11.65-1.37-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.8 1.05a9.7 9.7 0 0 1 5.1 0c1.95-1.33 2.8-1.05 2.8-1.05.56 1.41.21 2.45.1 2.71.66.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.69.94.69 1.9l-.01 2.81c0 .27.19.6.7.49A10.2 10.2 0 0 0 12 1.8"/></svg>
+          </a>
+        </li>
+        
+        <li>
+          <a class="contacts__link" href="https://orcid.org/0000-0002-7944-2543"
+             target="_blank" rel="noopener me"
+             title="ORCID: 0000-0002-7944-2543">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="false" role="img" focusable="false"><title>ORCID</title><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m-3.9 4.6a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9M7.4 9.4h1.5v7.2H7.4zm3.3 0h3.1a3.6 3.6 0 0 1 0 7.2h-3.1zm1.5 1.4v4.4h1.5a2.2 2.2 0 0 0 0-4.4z"/></svg>
+          </a>
+        </li>
+        
+        <li>
+          <a class="contacts__link" href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&amp;fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&amp;p_=0&amp;q=orcid%3A0000-0002-7944-2543&amp;sort=date%20desc%2C%20bibcode%20desc"
+             target="_blank" rel="noopener me"
+             title="ADS: Publication list (incomplete)">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="false" role="img" focusable="false"><title>ADS</title><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 3.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M3.6 10.4h16.8M4.7 15.6h14.6"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 3.2c2.2 2.4 3.4 5.5 3.4 8.8S14.2 18.4 12 20.8c-2.2-2.4-3.4-5.5-3.4-8.8S9.8 5.6 12 3.2"/></svg>
+          </a>
+        </li>
+        
+        <li>
+          <a class="contacts__link" href="https://www.linkedin.com/in/jason-wu-astro"
+             target="_blank" rel="noopener me"
+             title="LinkedIn: jason-wu-astro">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="false" role="img" focusable="false"><title>LinkedIn</title><path fill="currentColor" d="M4.5 3h15A1.5 1.5 0 0 1 21 4.5v15A1.5 1.5 0 0 1 19.5 21h-15A1.5 1.5 0 0 1 3 19.5v-15A1.5 1.5 0 0 1 4.5 3m2.2 5.2a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8M5.6 18.4h2.3V9.7H5.6zM10 18.4h2.3v-4.6c0-.9.5-1.7 1.5-1.7s1.4.8 1.4 1.7v4.6h2.3v-5c0-2.5-1.4-3.7-3.2-3.7a2.8 2.8 0 0 0-2 1v-.9H10z"/></svg>
+          </a>
+        </li>
+        
+      </ul>
+
+      <button class="theme-toggle" id="theme-toggle" type="button"
+              aria-label="Switch colour theme" title="Theme: system">
+        <span class="theme-toggle__icon theme-toggle__icon--sun"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.6v2.1M12 19.3v2.1M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/></svg></span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.2A8.4 8.4 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2"/></svg></span>
+        <span class="theme-toggle__text" id="theme-toggle-text">System</span>
+      </button>
+    </div>
+
+  </div>
+</aside>
+
+
+<header class="mobilebar glass" id="mobilebar">
+  <a class="mobilebar__name" href="/" data-panel-link>
+    <span class="mobilebar__mark" aria-hidden="true">ZW</span>
+    <span>Zewei &#39;Jason&#39; Wu</span>
+  </a>
+  <button class="mobilebar__toggle" id="sidebar-toggle" type="button"
+          aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+
+
+  <main class="main" id="main" tabindex="-1">
+    
+    
+    <div class="panel" id="panel" data-panel-url="/research/" data-panel-title="Research">
+      
+
+      <div class="sectionbar glass" id="sectionbar">
+        <h2 class="sectionbar__title">Research</h2>
+        
+        <nav class="sectionbar__nav" aria-label="Research sections">
+          <a class="sectionbar__link" href="#focus" data-section-link="focus">Research Focus</a>
+          <a class="sectionbar__link" href="#current" data-section-link="current">Current Research</a>
+          <a class="sectionbar__link" href="#previous" data-section-link="previous">Previous Research</a>
+          <a class="sectionbar__link" href="#writing" data-section-link="writing">Writing</a>
+        </nav>
+        
+      </div>
+
+      <article class="panel__body prose">
+        
+
+
+<p class="lead"><em>Last updated 2025, please check CV for more up-to-date research information</em> — see the <a href="/research-blog/">research blog</a> for write-ups and notes as they happen.</p>
+
+
+<h2 id="focus">Research Focus</h2>
+
+<h3>Summary</h3>
+
+
+<p>My research is centered on the exploration of theoretical astrophysics, with a particular emphasis on structure formation in the smallest galaxies, and modeling the physical properties of our universe. I am actively involved in <a href="https://eonadler.github.io/group.html">Prof. Ethan Nadler’s research group</a> at University of California San Diego, as well as the <a href="https://astrophysics.uchicago.edu/people/profile/andrey-v.-kravtsov/">Structure Formation Research Group</a> at the University of Chicago, and the <a href="https://www.mpa-garching.mpg.de/1020167/multiphase-gas">Multiphase Gas Group</a> at the Max Planck Institute for Astrophysics.</p>
+
+<p>I use astrophysical observations on the smallest scales to probe the most fundamental questions in cosmology, such as the nature of dark matter and dark energy. As such, I was also involved in the <a href="https://coollamps.github.io/">COOL-LAMPS collaboration</a> for its work on strong lensing, as well as of the <a href="https://lsstdiscoveryalliance.org/lsst-science-collaborations/">LSST science collaboration</a>, where I use dwarf galaxies and stellar streams to uncover dark matter mini-halos. My ultimate goal is to unravel the tapestry of our universe, one galaxy at a time.</p>
+
+
+<h3>Areas of Interest</h3>
+
+
+<p>Computational Astrophysics</p>
+<ul class="chips">
+  <li><span>Hydrodynamical simulations</span></li>
+  <li><span>Semi-Analytical models</span></li>
+  <li><span>Structure formation</span></li>
+  <li><span>Numerical methodss</span></li>
+</ul>
+
+<p>Cosmology</p>
+<ul class="chips">
+  <li><span>Near Field Cosmology</span></li>
+  <li><span>Reionization</span></li>
+  <li><span>High-z dwarf galaxies</span></li>
+  <li><span>Dark matter &amp; energy</span></li>
+  <li><span>CMB</span></li>
+</ul>
+
+<p>Topical Interests</p>
+<ul class="chips">
+  <li><span>Local Group</span></li>
+  <li><span>Strong lensing</span></li>
+  <li><span>Ultra-faint dwarfs</span></li>
+  <li><span>Stellar streams</span></li>
+  <li><span>Baryonic &amp; dark sector physics</span></li>
+</ul>
+
+
+<h2 id="current">Current Research</h2>
+
+<div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_ufd.jpeg" alt="Milky Way-est volume" loading="lazy" decoding="async">
+  <figcaption>Region containing the Milky Way-est volume (Ethan Nadler)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">High-resolution Hydrodynamic Simulations of Ultra-Faint Milky Way Satellites</h3><p class="entry__meta">PIs: Ethan Nadler &amp; Michael Norman | Nadler Group | UCSD</p>
+    <ul>
+      <li>Develop a cosmological zoom-in simulation framework with the AMR code <a href="https://enzo-project.org/">ENZO</a> to resolve ultra-faint dwarf galaxies (UFDs) at ~10 M⊙ stellar mass and parsec-scale spatial resolution, while following their evolution in realistic Milky Way–like environments down to z = 0. UFDs occupy the lowest-mass halos that host stars, making for great astrophysical probe of the galaxy formation threshold and of dark matter physics.</li>
+      <li>Implement multi-region Lagrangian “must-refine” tracking on 100 independent dwarf halos per host, on <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...971...79B/abstract">Milky Way-est</a> initial conditions that reproduce the MW’s halo mass, merger history, and LMC analog accretion. Port and validate <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...932...71W/abstract">StarNet</a>, a machine-learning surrogate model for Population III star formation, coupled to ENZO via <a href="https://github.com/yt-project/libyt">libyt</a> for in-situ supernova feedback deposition.</li>
+      <li>Forward-model resulting UFD population: occupation fractions, luminosity functions, sizes, chemistry, and kinematics for comparison with LSST, Roman, and JWST.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="/files/26_FieldsNFC_ZeweiWu.pdf">Fields NFC poster <span class="ext" aria-hidden="true">↗</span></a></li>
+      <li><span>Paper in prep</span></li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_lyman_cont.jpg" alt="Lyman Continuum Leaker" loading="lazy" decoding="async">
+  <figcaption>A Possible Lyman-Continuum Leaker (<a href="https://ras.ac.uk/events-and-meetings/ras-meetings/production-and-escape-lyman-photons-through-time-and-space" target="_blank" rel="noopener">ESO/M. Kornmesser</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Semi-Analytical Models (SAM) of the Lyman Continuum (LyC) Escape Fraction</h3><p class="entry__meta">Mentor: Andrey Kravtsov | Structure Formation Group | UChicago</p>
+    <ul>
+      <li>Using the previously developed <a href="https://github.com/kibokov/GRUMPY">semi-analytical model GRUMPY</a> to simulate UV luminosity functions and ionizing flux for high-redshift dwarf galaxies in the Epoch of Reionization (EOR), at the James Webb (JWST) observational limits.</li>
+      <li>Developing novel methods on halo sampling and star formation stochasticity to test the evolution of Lyman continuum escape fraction with redshift and galaxy properties, such as luminosity, mass, metallicity, etc.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="https://arxiv.org/abs/2511.07543" target="_blank" rel="noopener">Paper on arxiv <span class="ext" aria-hidden="true">↗</span></a></li>
+      <li><a href="/files/URS2024_Jason_Wu.pdf">Poster <span class="ext" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_multiphase_gas.gif" alt="Multiphase Gas" loading="lazy" decoding="async">
+  <figcaption>A Multiphase Gas Simulation (<a href="https://hiteshkishoredas.github.io/research/mhd_multiphase.html" target="_blank" rel="noopener">Hitesh and myself</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Hydrodynamical Models of Turbulent Three-Phase Gas in the CGM</h3><p class="entry__meta">Mentor: Hitesh Kishore Das &amp; Max Grönke | Multiphase Gas Group | Max Planck Institute for Astrophysics</p>
+    <ul>
+      <li>Develop <a href="https://hiteshkishoblueas.github.io/research/mhd_multiphase.html">three-phase astrophysical plasma</a> simulation <a href="https://github.com/HiteshKishoblueas/athena_fork_turb_box">code</a> with temperature spanning 5 orders of magnitude. Running three-phase gas simulations with turbulence driving is an underexplored area in literature, and it is vital to a more realistic understanding of the circumgalactic medium (CGM).</li>
+      <li>High-performance computing with <a href="https://www.athena-astro.app/">ATHENA++</a> using the “Freya” supercomputer at MPA.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="https://docs.google.com/presentation/d/1d1-dowqR7uNBQBZE4m-lbpvv-WdLRdtXbc-vRsJCnpU/edit?usp=sharing" target="_blank" rel="noopener">DAAD RISE Meeting presentation <span class="ext" aria-hidden="true">↗</span></a></li>
+      <li><span>Paper in prep</span></li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="previous">Previous Research</h2>
+
+<div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_JWST_galaxy.jpg" alt="Galaxy NGC 5584" loading="lazy" decoding="async">
+  <figcaption>Galaxy NGC 5584 (<a href="https://webbtelescope.org/contents/media/images/01H9NTTMJBGTV6GVSGQ723MRQW" target="_blank" rel="noopener">JWST</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Forward Modeling UV Luminosity Functions for Dwarf Galaxies in the JWST Era</h3><p class="entry__meta">Mentor: Andrey Kravtsov | Structure Formation Group | UChicago</p>
+    <ul>
+      <li>Test semi-analytical models on existing ultraviolet luminosity function (UV LF) measurements.</li>
+      <li>Make and refine predictions about the UV LF of high-blueshift dwarf galaxies and their contribution to the universe’s ionizing photon budget.</li>
+      <li>Compute the contribution of galaxies of different luminosities to the ionizing photon budget of the universe using the model UV LF.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="https://aas245-aas.ipostersessions.com/default.aspx?s=D0-66-9F-6C-6B-09-E4-DF-B1-5F-F0-B5-74-6F-76-73" target="_blank" rel="noopener">AAS iPoster <span class="ext" aria-hidden="true">↗</span></a></li>
+      <li><a href="/files/URS2024_Jason_Wu.pdf">Poster <span class="ext" aria-hidden="true">↗</span></a></li>
+      <li><a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240508066W/abstract" target="_blank" rel="noopener">Paper <span class="ext" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_JWST_dwarf.jpg" alt="Dwarf galaxy Wolf–Lundmark–Melotte (WLM)" loading="lazy" decoding="async">
+  <figcaption>Dwarf galaxy Wolf–Lundmark–Melotte (WLM (<a href="https://webbtelescope.org/contents/media/images/01GHBYCCMDW24CT0BGH7WXNMS0.html" target="_blank" rel="noopener">JWST</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Densities and MAHs of the MW Satellites Are Not a Challenge to ΛCDM</h3><p class="entry__meta">Mentor: Andrey Kravtsov | Galactic Astrophysics Group | UChicago</p>
+    <ul>
+      <li>Extracted galactic data to simulate NFW profiles and evolutions.</li>
+      <li>Proved the proposed <a href="https://arxiv.org/abs/2107.03478">challenge to ΛCDM paradigm</a> by milky way dwarf galaxies is not a discrepancy.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="https://academic.oup.com/mnras/article/525/1/325/7232545" target="_blank" rel="noopener">Paper <span class="ext" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_stellar_stream.jpg" alt="Stellar Streams" loading="lazy" decoding="async">
+  <figcaption>Stars in Andromeda&#39;s stellar stream (<a href="https://esahubble.org/images/heic1112b/" target="_blank" rel="noopener">ESA/Hubble</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Statistical Modeling of Stellar Streams with LSST</h3><p class="entry__meta">Mentor: Alex Drlica-Wagner | Dark Matter Working Group | DESC (LSST)</p>
+    <ul>
+      <li>Develop the <a href="https://github.com/LSSTDESC/stream_sim/tree/jw">stream_sim</a> package to characterize effects of baryon and dark matter halo interactions on stellar streams.</li>
+      <li>Applied statistical toolkit such as 1D power spectrum to LSST data products. This is an ongoing effort to use LSST’s world-class capability to contribute to <a href="https://lsstdesc.org/">DESC</a>’s focus on dark matter.</li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_lensing.jpg" alt="Strong lensing in the Sunburst Arc" loading="lazy" decoding="async">
+  <figcaption>Strong lensing in the Sunburst Arc (<a href="https://esahubble.org/images/heic1920a/" target="_blank" rel="noopener">ESA/Hubble</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Strong Lens Modeling of Extreme Objects at the Cosmic Noon</h3><p class="entry__meta">Mentor: Michael Gladders | COOL-LAMPS Group | UChicago</p>
+    <ul>
+      <li>Simulate strongly lensed LyC-leaking systems at redshift z=2 to 3 with code such as Lenstool, Gigalens, and FSPS to develop lens and SED models, uncovering physical properties. These systems are of particular important due to their lookback time at the cosmic noon, where star formation activity is most prominent. Lensing is also key here as the magnification makes individual systems observable.</li>
+      <li>Run on-site observation with the <a href="https://www.as.arizona.edu/magellan-65m-telescopes">Magellan 6.5m Telescopes</a> in Chile; Design and lead dithering spectroscopy and imaging.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="https://ui.adsabs.harvard.edu/abs/2025hst..prop18014G/abstract" target="_blank" rel="noopener">Observing proposal <span class="ext" aria-hidden="true">↗</span></a></li>
+      <li><span>Paper in prep</span></li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_ldmx.jpg" alt="LDMX Detectors" loading="lazy" decoding="async">
+  <figcaption>LDMX Detectors (<a href="https://tknightnelson.wixsite.com/home/single-post/2017/03/01/developing-the-ldmx-detector" target="_blank" rel="noopener">Tim Nelson</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Particle Flow Reconstruction with the LDMX Detector</h3><p class="entry__meta">Mentor: Christian Herwig &amp; Nhan Tran | LDMX group, CMS | Fermilab</p>
+    <ul>
+      <li>Assist in the development of the Light Dark Matter Experiment (<a href="https://inspirehep.net/literature/1687806">LDMX</a>) by testing the C++ based <a href="https://github.com/LDMX-Software/ldmx-sw/tree/pfReco">LDMX–SW</a> code.</li>
+      <li>Develop a python-based particle flow reconstruction algorithm in the electromagnetic and hadronic calorimeters and simulating incoming particle behavior.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="https://docs.google.com/presentation/d/18yqZ_82kGT8PvL1rOExaX4xFmR0oYgylV1ESbV1pXSE/edit?usp=sharing" target="_blank" rel="noopener">LDMX Focus Talk presentation <span class="ext" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_DM.jpg" alt="Simulation of the dark-matter distribution in the universe" loading="lazy" decoding="async">
+  <figcaption>Simulation of the dark-matter distribution in the universe (<a href="https://ui.adsabs.harvard.edu/abs/2005Natur.435..629S/abstract" target="_blank" rel="noopener">V. Springel et al. 2005</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Degeneracy Breaking in Light Shining Through Wall (LSW) Experiments</h3><p class="entry__meta">Mentor: Ryan Janish | SQMS | Fermilab</p>
+    <ul>
+      <li>Run theoretical calculations that enable mass-coupling strength degeneracy breaking in the <a href="https://indico.fnal.gov/event/19433/contributions/52134/attachments/32422/39718/DarkSRF-Theory-PAC.pdf">Dark SRF</a> experiment.</li>
+      <li>Report predictions of hiddene photon properties in the case of a detection.</li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_asteroid.jpg" alt="Artist’s concept of &#39;Oumuamua" loading="lazy" decoding="async">
+  <figcaption>Artist’s concept of &#39;Oumuamua (<a href="https://www.nasa.gov/missions/solar-systems-first-interstellar-visitor-dazzles-scientists/" target="_blank" rel="noopener">ESO/M. Kornmesser</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Deducing Origins of Oumuamua 17’ Through Mean Motion Resonances</h3><p class="entry__meta">Mentor: Darryl Seligman | Exoplanet Group</p>
+    <ul>
+      <li>Incorporated mathematical models and large-scale simulations to theorize the optimal conditions for interstellar ejections by mean motion resonances.</li>
+      <li>Analyzed exo-solar systems to deduce potential origins of Oumuamua 17’.</li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_SN.jpg" alt="X-ray image of SN 1572" loading="lazy" decoding="async">
+  <figcaption>X-ray image of SN 1572 (<a href="https://chandra.harvard.edu/photo/2005/tycho/" target="_blank" rel="noopener">NASA/J.Warren &amp; J.Hughes et al</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Photometric analysis and light curve modeling of apparent transient 2020pni</h3><p class="entry__meta">Mentor: Michael Faison | Department of Astronomy | Yale University</p>
+    <ul>
+      <li>Conducted a four-week photometric analysis on supernova 2020pni using the Leitner Observatory, observing changes in the light intensity of the event.</li>
+      <li>Contributed to transient databseses such as the <a href="https://www.wis-tns.org/">Transient Name Server (TNS)</a> , reporting on physical insights such as distance, stellar composition, and luminosity.</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="https://emerginginvestigators.org/articles/21-085" target="_blank" rel="noopener">Paper <span class="ext" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_BH.jpg" alt="A visualization of the black hole accretion disk" loading="lazy" decoding="async">
+  <figcaption>A visualization of the black hole accretion disk (<a href="https://svs.gsfc.nasa.gov/13326" target="_blank" rel="noopener">NASA/Jeremy Schnittman</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">The Iron Line Profile in Black Hole Accretion Disks</h3><p class="entry__meta">Mentor: Lin | High Energy Astrophysics Group | National Astronomical Observatories, the Chinese Academy of Science</p>
+    <ul>
+      <li>Studied and assisted with efforts to characterize the iron line in black hole accretion disks.</li>
+      <li>Analyzed high-energy and black hole astrophysics scientific papers.</li>
+    </ul>
+  </div>
+</div><div class="entry">
+  <figure class="figure ">
+  <img src="/images/research_lotus.jpg" alt="Water droplets on a lotus leaf" loading="lazy" decoding="async">
+  <figcaption>Water droplets on a lotus leaf (<a href="https://source.wustl.edu/2019/12/plants-model-more-efficient-thermal-cooling-method/" target="_blank" rel="noopener">WUSTL</a>)</figcaption>
+</figure>
+  <div class="entry__body">
+    <h3 class="entry__title">Natural Characteristics That Lead to Superhydrophobicity</h3><p class="entry__meta">Mentor: Devon Renock | Department of Earth Sciences | Dartmouth</p>
+    <ul>
+      <li>Examined hydrophobic properties of plant surfaces; chemically engineeblue oleophilic sponges for oil spill–cleanups.</li>
+      <li>Presented and wrote in peer-reviewed journals. Involved in conferences such as Intel’s International Science and Engineering Fair ( <a href="https://www.societyforscience.org/isef/">ISEF</a> ).</li>
+    </ul>
+    <ul class="chips">
+      <li><a href="/files/ISEF Research Paper-Jason Wu-SBI168.pdf">ISEF Paper <span class="ext" aria-hidden="true">↗</span></a></li>
+      <li><a href="/files/ISEF Research Poster.pdf">PRSEF Poster <span class="ext" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="writing">Writing</h2>
+
+<p>Longer-form notes, code snippets and thoughts on astronomy live in the research blog.</p>
+
+<p><a class="button" href="/research-blog/">Open the research blog <span class="ext" aria-hidden="true">↗</span></a></p>
+
+      </article>
+
+      <footer class="panel__foot">
+        <p>© Zewei &#39;Jason&#39; Wu · last built September 2026</p>
+      </footer>
+    </div>
+  </main>
+</div>
+
+
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/glass.js" defer></script>
+  
+<script src="/assets/js/sectionbar.js" defer></script>
+<script src="/assets/js/router.js" defer></script>
+<script src="/assets/js/map.js" defer></script>
+<script src="/assets/js/lightbox.js" defer></script>
+
+</body>
+</html>

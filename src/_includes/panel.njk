@@ -1,0 +1,42 @@
+{% extends "base.njk" %}
+{% import "partials/icons.njk" as icons %}
+
+{% block body %}
+<div class="shell">
+  {% include "partials/sidebar.njk" %}
+
+  <main class="main" id="main" tabindex="-1">
+    {# Everything inside #panel is what the router swaps out.            #}
+    {# Keep the wrapper itself stable — the sidebar never re-renders.    #}
+    <div class="panel" id="panel" data-panel-url="{{ page.url }}" data-panel-title="{{ title }}">
+      {% set headings = content | sectionHeadings %}
+
+      <div class="sectionbar glass" id="sectionbar">
+        <h2 class="sectionbar__title">{{ title }}</h2>
+        {% if headings.length %}
+        <nav class="sectionbar__nav" aria-label="{{ title }} sections">
+          {%- for h in headings %}
+          <a class="sectionbar__link" href="#{{ h.id }}" data-section-link="{{ h.id }}">{{ h.text }}</a>
+          {%- endfor %}
+        </nav>
+        {% endif %}
+      </div>
+
+      <article class="panel__body prose">
+        {{ content | safe }}
+      </article>
+
+      <footer class="panel__foot">
+        <p>© {{ site.name }} · last built {{ page.date | readableDate("LLLL yyyy") }}</p>
+      </footer>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ '/assets/js/sectionbar.js' | url }}" defer></script>
+<script src="{{ '/assets/js/router.js' | url }}" defer></script>
+<script src="{{ '/assets/js/map.js' | url }}" defer></script>
+<script src="{{ '/assets/js/lightbox.js' | url }}" defer></script>
+{% endblock %}

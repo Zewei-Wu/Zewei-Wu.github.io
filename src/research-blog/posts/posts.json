@@ -1,0 +1,7 @@
+{
+  "layout": "post.njk",
+  "tags": ["post"],
+  "backHref": "/research-blog/",
+  "backLabel": "All posts",
+  "permalink": "/research-blog/{{ page.fileSlug }}/"
+}

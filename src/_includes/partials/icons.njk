@@ -1,0 +1,76 @@
+{# ------------------------------------------------------------------ #}
+{# Inline SVG icon set. Usage: {{ icons.icon("github", "Label") }}      #}
+{# Add a new icon by adding an {% elif %} branch below.                #}
+{# ------------------------------------------------------------------ #}
+{% macro icon(name, label="") -%}
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="{{ "false" if label else "true" }}"{% if label %} role="img"{% endif %} focusable="false">
+  {%- if label %}<title>{{ label }}</title>{% endif -%}
+  {%- if name == "mail" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 7.5A2.5 2.5 0 0 1 5.5 5h13A2.5 2.5 0 0 1 21 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 16.5z"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m3.6 7 7.3 5.3a2 2 0 0 0 2.2 0L20.4 7"/>
+  {%- elif name == "github" -%}
+  <path fill="currentColor" d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49l-.01-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.18-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.98.85.09-.66.36-1.11.65-1.37-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.8 1.05a9.7 9.7 0 0 1 5.1 0c1.95-1.33 2.8-1.05 2.8-1.05.56 1.41.21 2.45.1 2.71.66.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.69.94.69 1.9l-.01 2.81c0 .27.19.6.7.49A10.2 10.2 0 0 0 12 1.8"/>
+  {%- elif name == "orcid" -%}
+  <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m-3.9 4.6a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9M7.4 9.4h1.5v7.2H7.4zm3.3 0h3.1a3.6 3.6 0 0 1 0 7.2h-3.1zm1.5 1.4v4.4h1.5a2.2 2.2 0 0 0 0-4.4z"/>
+  {%- elif name == "ads" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 3.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M3.6 10.4h16.8M4.7 15.6h14.6"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 3.2c2.2 2.4 3.4 5.5 3.4 8.8S14.2 18.4 12 20.8c-2.2-2.4-3.4-5.5-3.4-8.8S9.8 5.6 12 3.2"/>
+  {%- elif name == "arxiv" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M6.2 3.3h7.6l4.6 4.6v12.8H6.2z"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M13.6 3.5v4.7h4.6"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="m9.3 11.6 5 5m0-5-5 5"/>
+  {%- elif name == "inspire" -%}
+  <circle cx="12" cy="12" r="2.1" fill="currentColor"/>
+  <ellipse cx="12" cy="12" rx="9.2" ry="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <ellipse cx="12" cy="12" rx="9.2" ry="4" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(60 12 12)"/>
+  <ellipse cx="12" cy="12" rx="9.2" ry="4" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(120 12 12)"/>
+  {%- elif name == "linkedin" -%}
+  <path fill="currentColor" d="M4.5 3h15A1.5 1.5 0 0 1 21 4.5v15A1.5 1.5 0 0 1 19.5 21h-15A1.5 1.5 0 0 1 3 19.5v-15A1.5 1.5 0 0 1 4.5 3m2.2 5.2a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8M5.6 18.4h2.3V9.7H5.6zM10 18.4h2.3v-4.6c0-.9.5-1.7 1.5-1.7s1.4.8 1.4 1.7v4.6h2.3v-5c0-2.5-1.4-3.7-3.2-3.7a2.8 2.8 0 0 0-2 1v-.9H10z"/>
+  {%- elif name == "instagram" -%}
+  <rect x="3.3" y="3.3" width="17.4" height="17.4" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+  {%- elif name == "doc" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M6 3.2h7.5L18.5 8v12.8H6z"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M13.3 3.4V8.2h4.9M9 12h6M9 15h6M9 9h2.2"/>
+  {%- elif name == "building" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 20.5h16M5.5 20.5V9.2l6.5-4.7 6.5 4.7v11.3M9.7 20.5v-4.3h4.6v4.3"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M9.3 11.4h.01M14.7 11.4h.01"/>
+  {%- elif name == "pin" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 21c4-4.2 6-7.4 6-10a6 6 0 1 0-12 0c0 2.6 2 5.8 6 10"/>
+  <circle cx="12" cy="11" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  {%- elif name == "globe" -%}
+  <circle cx="12" cy="12" r="8.8" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" d="M3.2 12h17.6M12 3.2c2.3 2.4 3.5 5.5 3.5 8.8S14.3 18.4 12 20.8c-2.3-2.4-3.5-5.5-3.5-8.8S9.7 5.6 12 3.2"/>
+  {%- elif name == "home" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 10.6 12 4l8 6.6V19a1.6 1.6 0 0 1-1.6 1.6H5.6A1.6 1.6 0 0 1 4 19z"/>
+  {%- elif name == "arrow-left" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M15 5.5 8.5 12l6.5 6.5"/>
+  {%- elif name == "sun" -%}
+  <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.6v2.1M12 19.3v2.1M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/>
+  {%- elif name == "moon" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.2A8.4 8.4 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2"/>
+  {%- elif name == "menu" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+  {%- elif name == "close" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/>
+  {%- elif name == "camera" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M3.2 8.6A1.6 1.6 0 0 1 4.8 7h2.6l1.3-2h6.6l1.3 2h2.6a1.6 1.6 0 0 1 1.6 1.6v9.2a1.6 1.6 0 0 1-1.6 1.6H4.8a1.6 1.6 0 0 1-1.6-1.6z"/>
+  <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  {%- elif name == "palette" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 3.2a8.8 8.8 0 0 0 0 17.6c1.3 0 1.9-.8 1.9-1.7 0-.9-.6-1.5-.6-2.3 0-.9.7-1.6 1.7-1.6h1.6a4.2 4.2 0 0 0 4.2-4.2c0-4.3-4-7.8-8.8-7.8"/>
+  <circle cx="8" cy="10" r="1.2" fill="currentColor"/><circle cx="12" cy="7.6" r="1.2" fill="currentColor"/><circle cx="16" cy="10" r="1.2" fill="currentColor"/>
+  {%- elif name == "flask" -%}
+  <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M9.6 3.4h4.8M10.4 3.4v5.4L5.2 17.5a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3l-5.2-8.7V3.4"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.7" d="M7.6 14.6h8.8"/>
+  {%- else -%}
+  <circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  {%- endif -%}
+</svg>
+{%- endmacro %}
+
+{% macro ext() -%}
+<span class="ext" aria-hidden="true">↗</span>
+{%- endmacro %}

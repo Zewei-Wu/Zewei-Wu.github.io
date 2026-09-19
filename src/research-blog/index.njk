@@ -1,0 +1,56 @@
+---
+title: Research Blog
+permalink: /research-blog/
+backLabel: Back to main site
+description: Notes, code snippets and thoughts on astronomy and simulations by Zewei (Jason) Wu.
+tags: ["standalone"]
+order: 1
+---
+{% extends "standalone.njk" %}
+{% import "partials/icons.njk" as icons %}
+
+{% block topend %}
+<ul class="topbar__socials">
+  <li><a href="https://github.com/JasonWooo" target="_blank" rel="noopener" title="GitHub">{{ icons.icon("github", "GitHub") }}</a></li>
+</ul>
+{% endblock %}
+
+{% block page %}
+<header class="page-head">
+  <h1 class="page-head__title">Research Blog</h1>
+  <p class="page-head__intro">
+    Working notes on astronomy and simulations: things I worked out, things that
+    broke, and thoughts worth keeping.
+  </p>
+</header>
+
+{% set posts = collections.posts %}
+{% if posts.length %}
+<div class="waterfall">
+  {%- for post in posts %}
+  {%- set hero = post.data.image or (post.templateContent | firstImage) %}
+  <article class="card{% if not hero %} card--noimage{% endif %}">
+    <a class="card__link" href="{{ post.url | url }}">
+      {%- if hero %}
+      <div class="card__media">
+        <img src="{{ hero | orPlaceholder }}" alt="" loading="lazy" decoding="async">
+      </div>
+      {%- endif %}
+      <div class="card__body">
+        <p class="card__meta">
+          <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate("LLL d, yyyy") }}</time>
+          {%- if post.data.draft %} · draft{% endif %}
+        </p>
+        <h2 class="card__title">{{ post.data.title }}</h2>
+        <p class="card__excerpt">{{ post.data.subtitle or (post.templateContent | excerpt(26)) }}</p>
+      </div>
+    </a>
+  </article>
+  {%- endfor %}
+</div>
+{% else %}
+<p class="empty-note">
+  No posts yet.
+</p>
+{% endif %}
+{% endblock %}

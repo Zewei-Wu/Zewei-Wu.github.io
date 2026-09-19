@@ -1,0 +1,93 @@
+{% import "partials/icons.njk" as icons %}
+
+{# ------------------------------------------------------------------ #}
+{# The global left bar. Present on every panel page; never re-rendered #}
+{# when switching panels.                                             #}
+{# ------------------------------------------------------------------ #}
+<aside class="sidebar glass" id="sidebar" aria-label="Site navigation">
+  <div class="sidebar__inner">
+
+    <header class="identity">
+      <a class="identity__link" href="{{ '/' | url }}" data-panel-link>
+        {% if site.portrait | assetExists %}
+        <img class="identity__portrait" src="{{ site.portrait | url }}" alt="" width="128" height="128" loading="eager">
+        {% endif %}
+        <span class="identity__mark" aria-hidden="true">{{ site.initials }}</span>
+      </a>
+      <h1 class="identity__name">
+        <a href="{{ '/' | url }}" data-panel-link>{{ site.name }}</a>
+      </h1>
+      <p class="identity__tagline">{{ site.tagline }}</p>
+    </header>
+
+    <nav class="nav" aria-label="Sections">
+      <ul class="nav__list">
+        {%- for panel in collections.panels %}
+        <li>
+          <a class="nav__link{% if page.url == panel.url %} is-active{% endif %}"
+             href="{{ panel.url | url }}"
+             data-panel-link
+             {% if page.url == panel.url %}aria-current="page"{% endif %}>
+            <span class="nav__dot" aria-hidden="true"></span>
+            <span class="nav__label">{{ panel.data.title }}</span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+
+      <p class="nav__divider" aria-hidden="true"></p>
+
+      <ul class="nav__list nav__list--pages">
+        {%- for item in collections.standalone %}
+        <li>
+          <a class="nav__link nav__link--page" href="{{ item.url | url }}">
+            <span class="nav__label">{{ item.data.title }}</span>
+            {{ icons.ext() }}
+          </a>
+        </li>
+        {%- endfor %}
+        <li>
+          <a class="nav__link nav__link--page" href="{{ site.cvFile | url }}" target="_blank" rel="noopener">
+            <span class="nav__label">Curriculum Vitae (PDF)</span>
+            {{ icons.ext() }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar__foot">
+      <ul class="contacts" aria-label="Contact and profiles">
+        {%- for c in contact %}{% if c.sidebar %}
+        <li>
+          <a class="contacts__link" href="{{ c.href }}"
+             {% if '://' in c.href %}target="_blank" rel="noopener me"{% endif %}
+             title="{{ c.label }}: {{ c.value }}">
+            {{ icons.icon(c.icon, c.label) }}
+          </a>
+        </li>
+        {% endif %}{%- endfor %}
+      </ul>
+
+      <button class="theme-toggle" id="theme-toggle" type="button"
+              aria-label="Switch colour theme" title="Theme: system">
+        <span class="theme-toggle__icon theme-toggle__icon--sun">{{ icons.icon("sun") }}</span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon">{{ icons.icon("moon") }}</span>
+        <span class="theme-toggle__text" id="theme-toggle-text">System</span>
+      </button>
+    </div>
+
+  </div>
+</aside>
+
+{# Mobile header: the sidebar collapses behind this. #}
+<header class="mobilebar glass" id="mobilebar">
+  <a class="mobilebar__name" href="{{ '/' | url }}" data-panel-link>
+    <span class="mobilebar__mark" aria-hidden="true">{{ site.initials }}</span>
+    <span>{{ site.name }}</span>
+  </a>
+  <button class="mobilebar__toggle" id="sidebar-toggle" type="button"
+          aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation">
+    {{ icons.icon("menu") }}
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>

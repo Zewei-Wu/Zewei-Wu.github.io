@@ -1,0 +1,51 @@
+---
+title: Contacts & CV
+order: 3
+permalink: /cv/
+description: Curriculum vitae and full contact information for Zewei (Jason) Wu.
+---
+{% import "partials/icons.njk" as icons %}
+
+<h2 id="contact">Contact</h2>
+
+<ul class="contact-list">
+  {%- for c in contact %}{% if c.full %}
+  <li class="contact-list__row">
+    <span class="contact-list__icon">{{ icons.icon(c.icon) }}</span>
+    <span class="contact-list__label">{{ c.label }}</span>
+    <span class="contact-list__value">
+      {%- if c.href -%}
+      <a href="{{ c.href }}"{% if '://' in c.href %} target="_blank" rel="noopener"{% endif %}>{{ c.value }} <span class="ext" aria-hidden="true">↗</span></a>
+      {%- else -%}
+      {{ c.value }}
+      {%- endif -%}
+    </span>
+  </li>
+  {% endif %}{%- endfor %}
+</ul>
+
+<h2 id="cv">Curriculum Vitae</h2>
+
+<p>
+  <a class="button" href="{{ site.cvFile | url }}" download>Download PDF</a>
+  <a class="button" href="{{ site.cvFile | url }}" target="_blank" rel="noopener">Open in a new tab <span class="ext" aria-hidden="true">↗</span></a>
+</p>
+
+{% if site.cvFile | assetExists %}
+<div class="cv-embed">
+  <object data="{{ site.cvFile | url }}#view=FitH" type="application/pdf" aria-label="Curriculum vitae">
+    <iframe src="{{ site.cvFile | url }}#view=FitH" title="Curriculum vitae"></iframe>
+    <div class="cv-fallback">
+      <p>Your browser can’t display the PDF inline.</p>
+      <p><a class="button" href="{{ site.cvFile | url }}">Open the CV <span class="ext" aria-hidden="true">↗</span></a></p>
+    </div>
+  </object>
+</div>
+{% else %}
+<p class="empty-note">
+  Drop your CV at <code>src{{ site.cvFile }}</code> and it will show up here.
+  The path is set by <code>cvFile</code> in <code>src/_data/site.yaml</code>.
+</p>
+{% endif %}
+
+<p class="muted-note">Disclaimer: this page is semi-regularly maintained and may be outdated.</p>

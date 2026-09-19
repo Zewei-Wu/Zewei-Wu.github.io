@@ -1,0 +1,75 @@
+# ---------------------------------------------------------------------------
+# Contact links.
+#   sidebar: true  -> icon appears in the left global bar (keep this short)
+#   full:    true  -> row appears in the full contact block on the CV panel
+# `icon` must match a name defined in src/_includes/partials/icons.njk
+# ---------------------------------------------------------------------------
+- label: Email
+  value: jaw064@ucsd.edu
+  href: mailto:jaw064@ucsd.edu
+  icon: mail
+  sidebar: true
+  full: true
+
+- label: GitHub
+  value: Zewei-Wu
+  href: https://github.com/Zewei-Wu
+  icon: github
+  sidebar: true
+  full: true
+
+- label: ORCID
+  value: 0000-0002-7944-2543
+  href: https://orcid.org/0000-0002-7944-2543
+  icon: orcid
+  sidebar: true
+  full: true
+
+- label: arXiv
+  value: Publication list (preprints)
+  href: https://arxiv.org/search/astro-ph?query=Wu%2C+Zewei&searchtype=author&abstracts=show&order=-announced_date_first&size=50
+  icon: arxiv
+  sidebar: false
+  full: true
+
+- label: ADS
+  value: Publication list (incomplete)
+  href: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=orcid%3A0000-0002-7944-2543&sort=date%20desc%2C%20bibcode%20desc
+  icon: ads
+  sidebar: true
+  full: true
+
+- label: LinkedIn
+  value: jason-wu-astro
+  href: https://www.linkedin.com/in/jason-wu-astro
+  icon: linkedin
+  sidebar: true
+  full: true
+
+- label: InspireHEP
+  value: Author profile
+  href: https://inspirehep.net/authors/2671029
+  icon: inspire
+  sidebar: false
+  full: true
+
+- label: Department
+  value: Dept. of Astronomy & Astrophysics, UC San Diego
+  href: https://astro.ucsd.edu/
+  icon: building
+  sidebar: false
+  full: true
+
+- label: Location
+  value: La Jolla, CA 92093, USA
+  href: ""
+  icon: pin
+  sidebar: false
+  full: true
+
+- label: Instagram (art)
+  value: "@jwu_arts"
+  href: https://www.instagram.com/jwu_arts/
+  icon: instagram
+  sidebar: false
+  full: false

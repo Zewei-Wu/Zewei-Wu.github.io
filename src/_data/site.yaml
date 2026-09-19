@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------------------
+# Global site settings. Change things here rather than hunting through
+# templates. `url` is used for absolute links in meta tags and the sitemap.
+# ---------------------------------------------------------------------------
+name: Zewei 'Jason' Wu
+initials: ZW
+nickname: Jason
+tagline: Astrophysics PhD student; Galaxy formation simulations
+role: PhD student in Astrophysics
+affiliation: University of California, San Diego
+affiliationUrl: https://astro.ucsd.edu/
+url: https://Zewei-Wu.github.io
+description: >-
+  Personal website of Zewei 'Jason' Wu
+  Astrophysics research on galaxy and dark matter simulations
+  A CV website, research blog, an art portfolio
+keywords: Zewei Wu, Jason Wu, astrophysics, cosmology, dark matter, simulations, UCSD
+cvFile: /files/ZeweiWuCV.pdf
+portrait: /images/front.jpg
+favicon: /images/icon.jpeg
+
+
+
+# Shown at the bottom of the home panel. See src/_data/collaborators.yaml
+# for the pin data.
+map:
+  enabled: true
+  title: My Journey
+  blurb: >-
+    My journey across the globe, mapped. These are institutions and observatories behind the projects on this site. I am grateful to every collaborator, colleague, and friend for making my academic journey possible.
+  # Optional live visitor map. Need to finish since clustrmaps has shut down
+  visitorProvider: ""
+  visitorId: ""
