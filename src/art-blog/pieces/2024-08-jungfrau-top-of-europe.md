@@ -8,4 +8,4 @@ image: "arts/photography/2024_8_jungfrau Large.jpeg"
 gear: "Nikon D750, M | f5.0, 1/250, ISO320"
 ---
 
-- This photo was taken atop Jungfrau of the Swiss alps. The two houses in the foreground contrast with the expansive, rolling landscape of the back. It makes me imagine the details of its residents' daily lives.
+- This photo was taken atop Jungfrau of the Swiss alps. The two houses in the foreground contrast with the expansive, rolling landscape of the back, conjuring up details of the daily lives of its residents.
